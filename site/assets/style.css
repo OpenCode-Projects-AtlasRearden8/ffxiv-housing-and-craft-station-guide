@@ -1,0 +1,90 @@
+/* Style for the FFXIV Housing for Non-Crafters manual. */
+:root {
+  --bg: #f6f3ec;
+  --panel: #fffdf7;
+  --ink: #2d312e;
+  --accent: #6a8d5f;
+  --accent-dark: #3f5a38;
+  --line: #ddd6c6;
+  --code-bg: #efeadb;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+}
+a { color: var(--accent-dark); }
+a:hover { color: var(--accent); }
+.site-header {
+  background: var(--accent-dark);
+  color: #fdfcf7;
+  padding: 1.6rem 2rem 1.2rem;
+}
+.site-header .kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  margin: 0;
+  color: #cfe0c5;
+}
+.site-title { margin: 0.2rem 0; font-size: 1.7rem; }
+.site-title a { color: #fdfcf7; text-decoration: none; }
+.site-header .tagline { max-width: 60ch; margin: 0.4rem 0 0; font-size: 0.95rem; color: #e5efe0; }
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 68rem;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+nav { flex: 0 0 15rem; }
+.nav-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-dark);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.35rem;
+}
+.nav-list { list-style: none; margin: 0; padding: 0; font-size: 0.95rem; }
+.nav-list li { margin: 0.45rem 0; }
+.nav-list li.active > a { font-weight: bold; }
+main { flex: 1 1 32rem; min-width: 0; }
+main h1 { font-size: 1.55rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.3rem; }
+main h2 { font-size: 1.25rem; margin-top: 2rem; }
+main h3 { font-size: 1.05rem; }
+main table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.95rem; }
+main th, main td { border: 1px solid var(--line); padding: 0.45rem 0.6rem; text-align: left; }
+main th { background: var(--code-bg); }
+main pre {
+  background: var(--code-bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+}
+main code { background: var(--code-bg); padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.9em; }
+main pre code { background: none; padding: 0; }
+main blockquote {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--panel);
+  color: #4a5148;
+}
+footer.site-footer {
+  max-width: 68rem;
+  margin: 2rem auto 3rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  color: #5a6157;
+}
+@media (max-width: 52rem) {
+  nav { flex-basis: 100%; }
+}
